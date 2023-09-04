@@ -2,6 +2,8 @@ import React from "react";
 
 export const FaqsPage =()=>{
     return(
-        kdkd
+        <div className="mainPage">
+            slf
+        </div>
     )
 }
