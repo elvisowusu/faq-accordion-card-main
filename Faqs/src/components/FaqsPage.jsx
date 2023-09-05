@@ -7,7 +7,7 @@ export const FaqsPage =()=>{
     return(
         <div className="mainPage">
             <div className="picture">
-
+dfghjkl;kjhgfdghjkl
             </div>
             <div className="faqs">
 
