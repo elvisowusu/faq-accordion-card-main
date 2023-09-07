@@ -10,14 +10,19 @@ import mobileWoman from "../assets/illustration-woman-online-mobile.svg"
 
 export const FaqsPage =()=>{
     return(
+        <div className="relative">
+        
         <div className="mainPage">
+
             <div className="picture">
                 <img className="desktopImg" src={desktopImage} alt="" />
                 <img className="desktopWoman" src={desktopWoman} alt="" />
             </div>
+                <img className="box" src={box} alt="" />
             <div className="faqs">
                 kljdfjlsadjsalkjflsj
             </div>
+        </div>
         </div>
     )
 }

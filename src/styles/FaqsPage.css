@@ -7,13 +7,14 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    border: solid 1px gray;
+    border: 0;
     overflow: hidden;
+    box-shadow: 1px 9px 60px rgb(1, 24, 125);
 }
 .picture{
     flex: 50%;
     position: relative;
-    z-index: 100;
+
 }
 .faqs{
     flex: 50%;
@@ -22,10 +23,22 @@
     position: absolute;
     top: -34.7rem;
     right: 3.8rem;
-    z-index: ;
 }
 .desktopWoman{
     position: absolute;
     right: 3.8rem;
     top: -12rem;
+}
+.box{
+    position:absolute;
+    left: 0rem;
+    top: 13.6rem;
+}
+.relative{
+    position: relative;
+    height: 34rem;
+    width: 71.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
