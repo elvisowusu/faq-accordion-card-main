@@ -1,5 +1,5 @@
 .mainPage{
-    height: 35rem;
+    height: 31.6rem;
     width: 60rem;
     background-color: white;
     border-radius: 1.2rem;
@@ -7,10 +7,13 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    border: solid 1px gray;
+    overflow: hidden;
 }
 .picture{
     flex: 50%;
     position: relative;
+    z-index: 100;
 }
 .faqs{
     flex: 50%;
@@ -19,7 +22,7 @@
     position: absolute;
     top: -34.7rem;
     right: 3.8rem;
-    
+    z-index: ;
 }
 .desktopWoman{
     position: absolute;
