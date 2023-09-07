@@ -12,8 +12,8 @@ export const FaqsPage =()=>{
     return(
         <div className="mainPage">
             <div className="picture">
-                <img src={desktopImage} alt="" width={450} height={450}/>
-                <img src={desktopWoman} alt="" width={400}/>
+                <img className="desktopImg" src={desktopImage} alt="" />
+                <img className="desktopWoman" src={desktopWoman} alt="" />
             </div>
             <div className="faqs">
                 kljdfjlsadjsalkjflsj
