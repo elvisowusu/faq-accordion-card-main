@@ -12,10 +12,11 @@ export const FaqsPage =()=>{
     return(
         <div className="mainPage">
             <div className="picture">
-dfghjkl;kjhgfdghjkl
+                <img src={desktopImage} alt="" width={450} height={450}/>
+                <img src={desktopWoman} alt="" width={400}/>
             </div>
             <div className="faqs">
-
+                kljdfjlsadjsalkjflsj
             </div>
         </div>
     )

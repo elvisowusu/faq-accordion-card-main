@@ -2,5 +2,17 @@
     height: 35rem;
     width: 60rem;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.picture{
+    flex: 50%;
+
+}
+.faqs{
+    flex: 50%;
+
 }
