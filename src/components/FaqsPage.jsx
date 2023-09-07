@@ -20,7 +20,22 @@ export const FaqsPage =()=>{
             </div>
                 <img className="box" src={box} alt="" />
             <div className="faqs">
-                kljdfjlsadjsalkjflsj
+                <h1>FAQ</h1>
+
+                <p className="question">How many team members can I invite?</p>
+                  <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+               <p className="question">What is the maximum file upload size?</p>
+                  <p className="sub">No more than 2GB. All files in your account must fit your allotted storage space</p>
+               
+               <p className="question">How do I reset my password?</p>
+                  <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               
+               <p className="question">Can I cancel my subscription?</p>
+                  <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               
+               <p className="question">Do you provide additional support?</p>
+                  <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
         </div>
