@@ -66,9 +66,24 @@ hr{
 button{
     border: 0;
     background-color: white;
-}
-/* .faqsdiv{
+    color: hsl(14, 83%, 62%);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: left;
-} */
+    justify-content: center;
+    height: 1.8rem;
+    width: 1.8rem;
+}
+button:hover{
+    color: red;
+    cursor: pointer;
+    background-color: rgb(236, 242, 249);
+}
+/* .arrow:hover{
+    width: 200px; /* Adjust the size as needed */
+    /* transform: rotate(-180deg);
+  transition: transform 0.5s ease;
+}  */
