@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/FaqsPage.css'
 import desktopImage from "../assets/bg-pattern-desktop.svg"
 import mobileImage from "../assets/bg-pattern-mobile.svg"
@@ -12,11 +12,12 @@ export const FaqsPage =()=>{
     const [open, setOpen] = useState([false,false,false,false,false]);
     const [rotation, setRotation] = useState([0,0,0,0,0]);
     const [bold,setBold] = useState([false,false,false,false,false])
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const handleArrowClick=(optionValue)=>{
-        const newOpen = open.map((item, index)=>index === optionValue ?!item :false);
+        const newOpen = open.map((item, index)=>index === optionValue ?!item : false);
         const newRotation = rotation.map((item, index)=> index ===optionValue? (item ===0? -180 :0):0);
-        const newBold = bold.map((item, index)=> index === optionValue?!item:false);
+        const newBold = bold.map((item, index)=> index === optionValue?!item : false);
 
         setRotation(newRotation);
         setOpen(newOpen);
@@ -29,10 +30,21 @@ export const FaqsPage =()=>{
             transition: `transform 0.5s ease`,
         }) 
     
-    const questionStyles =(index)=(
+    const questionStyles =(index)=>(
         {
-            fontWeight :bold[index]? 900:400,
+            fontWeight :bold[index] ? 900 : 400,
         });
+
+    useEffect (()=>{
+        const updateScreenWidth=()=>{
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize",updateScreenWidth);
+
+        return ()=>{
+            window.removeEventListener("resize",updateScreenWidth);
+        };    
+    },[]);
     
 
 
