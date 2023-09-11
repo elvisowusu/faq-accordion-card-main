@@ -27,7 +27,11 @@ export const FaqsPage =()=>{
             transition: `transform 0.5s ease`,
         }) 
     
-
+    const questionStyles = ()=>(
+        {
+            
+        }
+    )
 
 
 

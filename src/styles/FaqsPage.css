@@ -18,6 +18,8 @@
 }
 .faqs{
     flex: 50%;
+    margin: 0;
+    height: 25rem;
 }
 .desktopImg{
     position: absolute;
@@ -83,8 +85,7 @@ button:hover{
     background-color: rgb(236, 242, 249);
 }
 .faqsdiv > div{
-    margin: -0.3rem auto ;
-    
+    margin: -0.3rem auto ; 
 } 
 .question:hover{
     color: hsl(14, 83%, 62%);
