@@ -42,8 +42,8 @@ export const FaqsPage =()=>{
                     <div className="faqsdiv">
                      <div>
                         <p className="question">How many team members can I invite?</p>
-                        <button style={rotateArrow(1)} onClick={()=>{handleArrowClick(1)}} >
-                            < RiArrowDownSLine className={`arrow ${open && rotaa ===1? 'open' :''}`}/>
+                        <button  >
+                            < RiArrowDownSLine />
                         </button> 
                      </div>
                             {open && list === 1? <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>:""} 
@@ -53,7 +53,7 @@ export const FaqsPage =()=>{
                     <div className="faqsdiv">
                      <div>
                         <p className="question">What is the maximum file upload size?</p>
-                        <button style={rotateArrow(2)} onClick={()=>{handleArrowClick(2)}}>
+                        <button >
                             <RiArrowDownSLine className="arrow"/>
                         </button> 
                      </div>
@@ -64,7 +64,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                         <div>
                             <p className="question">How do I reset my password?</p>
-                            <button style={rotateArrow(3)} onClick={()=>{handleArrowClick(3)}}>
+                            <button >
                                 <RiArrowDownSLine className="arrow"/>
                             </button> 
                         </div>
@@ -75,7 +75,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Can I cancel my subscription?</p>
-                        <button style={rotateArrow(4)} onClick={()=>{handleArrowClick(4)}}>
+                        <button >
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
@@ -86,7 +86,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Do you provide additional support?</p>
-                        <button style={rotateArrow(5)} onClick={()=>{handleArrowClick(5)}}>
+                        <button >
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
