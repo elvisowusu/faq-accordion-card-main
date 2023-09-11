@@ -10,17 +10,24 @@ import {RiArrowDownSLine} from "react-icons/ri"
 
 export const FaqsPage =()=>{
     const [open, setOpen] = useState(false);
-    const [rotation, setRotation] = useState(0);
+    const [rotation, setRotation] = useState(null);
+    const [buttonOption, setButtonOption] = useState(null);
 
-    const handleArrowClick=(list)=>{
-        setRotation(list);
+    const handleArrowClick=(optionValue)=>{
+        setButtonOption(optionValue);
+        const newRotation = rotation === 0? -180 :0;
+        setRotation(newRotation)
         setOpen(!open);
     }
 
-    const rotateArrow=(optionValue) =>{
-        return optionValue ===rotation?
-        {transform:`rotate(${180}deg)`,
-        transition: `transform ${0.5}s ease`,}:{};
+    const rotateStyles = {
+        transform:`rotate(${rotation}deg)`,
+        transition: `transform ${0.5}s ease`,
+    };
+
+    const rotateArrow=(option) =>{
+        return option === buttonOption?
+        rotateStyles:{};
     }
     
 
@@ -42,18 +49,18 @@ export const FaqsPage =()=>{
                     <div className="faqsdiv">
                      <div>
                         <p className="question">How many team members can I invite?</p>
-                        <button  >
+                        <button style={rotateArrow(1)} onClick={()=>{handleArrowClick(1)}}>
                             < RiArrowDownSLine />
                         </button> 
                      </div>
-                            {open && list === 1? <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>:""} 
+                            { <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>} 
                         <hr />
                     </div>
 
                     <div className="faqsdiv">
                      <div>
                         <p className="question">What is the maximum file upload size?</p>
-                        <button >
+                        <button style={rotateArrow(2)} onClick={()=>{handleArrowClick(2)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button> 
                      </div>
@@ -64,7 +71,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                         <div>
                             <p className="question">How do I reset my password?</p>
-                            <button >
+                            <button style={rotateArrow(3)} onClick={()=>{handleArrowClick(3)}}>
                                 <RiArrowDownSLine className="arrow"/>
                             </button> 
                         </div>
@@ -75,7 +82,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Can I cancel my subscription?</p>
-                        <button >
+                        <button style={rotateArrow(4)} onClick={()=>{handleArrowClick(4)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
@@ -86,7 +93,7 @@ export const FaqsPage =()=>{
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Do you provide additional support?</p>
-                        <button >
+                        <button style={rotateArrow(5)} onClick={()=>{handleArrowClick(5)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
