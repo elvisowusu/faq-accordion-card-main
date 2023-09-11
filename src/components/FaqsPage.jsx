@@ -55,8 +55,8 @@ export const FaqsPage =()=>{
         <div className="mainPage">
 
             <div className="picture">
-                <img className="desktopImg" src={desktopImage} alt="" />
-                <img className="desktopWoman" src={desktopWoman} alt="" />
+                <img className="desktopImg" src={screenWidth<600? mobileImage:desktopImage} alt="" />
+                <img className="desktopWoman" src={screenWidth<600? mobileWoman:desktopWoman} alt="" />
             </div>
                 <img className="box" src={box} alt="" />
             <div className="faqs">
