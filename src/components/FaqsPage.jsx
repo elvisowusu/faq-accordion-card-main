@@ -9,26 +9,23 @@ import {RiArrowDownSLine} from "react-icons/ri"
 
 
 export const FaqsPage =()=>{
-    const [open, setOpen] = useState(false);
-    const [rotation, setRotation] = useState(null);
-    const [buttonOption, setButtonOption] = useState(null);
+    const [open, setOpen] = useState([false,false,false,false,false]);
+    const [rotation, setRotation] = useState([0,0,0,0,0]);
 
     const handleArrowClick=(optionValue)=>{
-        setButtonOption(optionValue);
-        const newRotation = rotation === 0? -180 :0;
+        const newOpen = open.map((item, index)=>index === optionValue ?!item :false);
+        const newRotation = rotation.map((item, index)=> index ===optionValue? (item ===0? -180 :0):0)
+
+
         setRotation(newRotation)
-        setOpen(!open);
+        setOpen(newOpen);
     }
 
-    const rotateStyles = {
-        transform:`rotate(${rotation}deg)`,
-        transition: `transform ${0.5}s ease`,
-    };
-
-    const rotateArrow=(option) =>{
-        return option === buttonOption?
-        rotateStyles:{};
-    }
+    const rotateStyles =(index)=>(
+        {
+            transform:`rotate(${rotation[index]}deg)`,
+            transition: `transform 0.5s ease`,
+        }) 
     
 
 
@@ -49,57 +46,57 @@ export const FaqsPage =()=>{
                     <div className="faqsdiv">
                      <div>
                         <p className="question">How many team members can I invite?</p>
-                        <button style={rotateArrow(1)} onClick={()=>{handleArrowClick(1)}}>
+                        <button style={rotateStyles(0)} onClick={()=>{handleArrowClick(0)}}>
                             < RiArrowDownSLine />
                         </button> 
                      </div>
-                            { <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>} 
-                        <hr />
+                            {open[0]? <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>:""} 
                     </div>
+                        <hr />
 
                     <div className="faqsdiv">
                      <div>
                         <p className="question">What is the maximum file upload size?</p>
-                        <button style={rotateArrow(2)} onClick={()=>{handleArrowClick(2)}}>
+                        <button style={rotateStyles(1)} onClick={()=>{handleArrowClick(1)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button> 
                      </div>
-                             <p className="sub">No more than 2GB. All files in your account must fit your allotted storage space</p>
-                        <hr />
+                             {open[1]?<p className="sub">No more than 2GB. All files in your account must fit your allotted storage space</p>:""}
                     </div>
+                        <hr />
 
                      <div className="faqsdiv">
                         <div>
                             <p className="question">How do I reset my password?</p>
-                            <button style={rotateArrow(3)} onClick={()=>{handleArrowClick(3)}}>
+                            <button style={rotateStyles(2)} onClick={()=>{handleArrowClick(2)}}>
                                 <RiArrowDownSLine className="arrow"/>
                             </button> 
                         </div>
-                             <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <hr />
+                             {open[2]?<p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>:""}
                      </div>
+                        <hr />
 
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Can I cancel my subscription?</p>
-                        <button style={rotateArrow(4)} onClick={()=>{handleArrowClick(4)}}>
+                        <button style={rotateStyles(3)} onClick={()=>{handleArrowClick(3)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
-                             <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <hr />
+                             {open[3]?<p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>:""}
                      </div>
+                        <hr />
 
                      <div className="faqsdiv">
                       <div>
                         <p className="question">Do you provide additional support?</p>
-                        <button style={rotateArrow(5)} onClick={()=>{handleArrowClick(5)}}>
+                        <button style={rotateStyles(4)} onClick={()=>{handleArrowClick(4)}}>
                             <RiArrowDownSLine className="arrow"/>
                         </button>  
                       </div>
-                             <p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <hr />
+                             {open[4]?<p className="sub">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>:""}
                     </div>
+                        <hr />
             </div>
         </div>
         </div>

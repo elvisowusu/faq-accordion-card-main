@@ -82,6 +82,14 @@ button:hover{
     cursor: pointer;
     background-color: rgb(236, 242, 249);
 }
+.faqsdiv > div{
+    margin: -0.3rem auto ;
+    
+} 
+.faqsdiv>div:hover{
+    color: hsl(14, 83%, 62%);
+    cursor: pointer;
+} 
 /* .arrow:hover{
     width: 200px; /* Adjust the size as needed */
     /* transform: rotate(-180deg);
