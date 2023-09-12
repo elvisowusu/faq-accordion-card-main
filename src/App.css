@@ -1,6 +1,5 @@
-
 body{
-    /* overflow: hidden; */
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: hsl(273, 75%, 66%);
@@ -8,4 +7,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (max-width:414px) {
+    body{
+        overflow-y: scroll; 
+        height: 100vh;
+
+    }
 }
