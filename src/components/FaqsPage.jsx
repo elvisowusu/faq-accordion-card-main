@@ -22,6 +22,7 @@ export const FaqsPage =()=>{
         setRotation(newRotation);
         setOpen(newOpen);
         setBold(newBold);
+        
     }
 
     const rotateStyles =(index)=>(
@@ -52,15 +53,16 @@ export const FaqsPage =()=>{
     return(
         <div className="relative">
         
-        <div className="mainPage">
+          <div className="mainPage">
 
             <div className="picture">
-                <img className="desktopImg" src={screenWidth<600? mobileImage:desktopImage} alt="" />
-                <img className="desktopWoman" src={screenWidth<600? mobileWoman:desktopWoman} alt="" />
+                <img className="desktopImg" src={screenWidth < 600 ? mobileImage:desktopImage} alt="" />
+                <img className="desktopWoman" src={screenWidth < 600 ? mobileWoman:desktopWoman} alt="" />
             </div>
-                <img className="box" src={box} alt="" />
+                <img className="box" src={screenWidth> 600?box:""} alt="" />
             <div className="faqs">
-                <h1>FAQ</h1>
+                <div className="heading"><h1>FAQ</h1></div>
+                
                     <div className="faqsdiv">
                      <div>
                         <p className="question" style={questionStyles(0)}>How many team members can I invite?</p>
@@ -116,7 +118,7 @@ export const FaqsPage =()=>{
                     </div>
                         <hr />
             </div>
-        </div>
+          </div>
         </div>
     )
 }
