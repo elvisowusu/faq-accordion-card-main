@@ -91,8 +91,62 @@ button:hover{
     color: hsl(14, 83%, 62%);
     cursor: pointer;
 }
-/* .arrow:hover{
-    width: 200px; /* Adjust the size as needed */
-    /* transform: rotate(-180deg);
-  transition: transform 0.5s ease;
-}  */
+
+
+@media screen and (max-width : 600px){
+    .mainPage{
+        overflow:visible;
+        width: 21rem;
+        flex-direction: column;
+        margin-top: 12rem;
+        padding-top: 7rem;
+        gap: 0rem;
+        height: 28rem;
+    }
+    
+    .relative{
+        margin-left: 0rem;
+    }
+    .heading{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 7rem;
+    }
+    
+.faqs{
+    margin-left:7rem;
+    height: 40rem;
+    width: 26rem;
+}
+.desktopImg{
+    position: absolute;
+    top: -13.6rem;
+    right: 0rem;
+}
+.desktopWoman{
+    position: absolute;
+    right: 0rem;
+    top: -20.3rem;
+}
+.picture{
+    padding: 7.5rem;
+    position:absolute;
+}
+
+.question{
+    font-size: 1.04rem;
+}
+.sub{
+    padding-right:7rem;
+    margin: 0;
+    font-size: 1rem;
+}
+hr{
+    color: hsl(240, 5%, 91%);
+    border: solid 0.5px;
+    width: 18rem;
+    margin-left: 0rem;
+}
+}
