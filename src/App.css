@@ -10,6 +10,6 @@ body{
 }
 @media screen and (max-width:414px) {
     body{
-    
+        height: 90vh;
     }
 }
